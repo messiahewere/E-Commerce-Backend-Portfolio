@@ -3,6 +3,7 @@ const router = express.Router();
 const {registerUser, loginUser} = require('../contollers/auth-controllers');
 
 // register user
+// https://e-commerce-backend-portfolio.onrender.com
 // PUT /api/auth/register
 router.post('/register', registerUser);
 

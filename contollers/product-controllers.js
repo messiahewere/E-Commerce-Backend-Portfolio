@@ -29,7 +29,7 @@ const editAProduct = async (req, res) => {
         const updated = await Product.findByIdAndUpdate(id, {title, description, price, category, brand, rating, stock, images}, 
                         {new: true});
         if(updated) {
-            res.status(200).json(updated);
+            res.status(201).json(updated);
         } else {
             res.status(404).json({message: 'Product not found'});
         }

@@ -4,13 +4,20 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const productRoutes = require('./routes/product-route');
 const authRoutes = require('./routes/auth-route');
+const cors = require("cors");
+const { swaggerUi, swaggerSpec } = require("./swagger/swagger");
 
 
 const port = process.env.PORT || 3000;
 
+app.use(cors({
+  origin: "*",
+  credentials: true
+}));
 app.use(express.json());
 app.use('/api/products', productRoutes);
 app.use('/api/auth', authRoutes);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 const dbConnect = async () => {
     try {
@@ -27,3 +34,7 @@ const dbConnect = async () => {
 
 dbConnect();
 
+mongoose.connection.on("disconnected", () => {
+  console.log("MongoDB disconnected. Attempting to reconnect...");
+  mongoose.connect(process.env.MONGO_URI);
+});
