@@ -30,29 +30,31 @@ router.route('/').get(getAllProducts);
  * /api/products/product:
  *   post:
  *     summary: Create a product
- *      requestBody: 
- *        required: true
- *        content:
- *          application/json:
+ *     requestBody: 
+ *       required: true
+ *       content:
+ *         application/json:
  *           schema:
- *            type: object
- *            properties:
- *             title: 
- *              type: string
- *             description:
- *              type: string
- *             price:  
- *               type: number
- *             category:
- *               type: string
- *             brand:
- *               type: string
- *             rating:
- *               type: number
- *             stock:   
- *               type: number
- *             images:
- *               type: string[]
+ *             type: object
+ *             properties:
+ *               title: 
+ *                 type: string
+ *               description:
+ *                 type: string
+ *               price:  
+ *                 type: number
+ *               category:
+ *                 type: string
+ *               brand:
+ *                 type: string
+ *               rating:
+ *                 type: number
+ *               stock:   
+ *                 type: number
+ *               images:
+ *                 type: array
+ *                 items:
+ *                   type: string
  *     responses:
  *       201:
  *         description: Returns a product object that was created
