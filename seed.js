@@ -21,432 +21,342 @@ const dbConnectSeed = async () => {
 }
 
 const products = [
-  // ----------------------- ELECTRONICS -----------------------
+  // ELECTRONICS
   {
     title: "Wireless Bluetooth Headphones",
-    description: "Noise-cancelling over-ear headphones with 40h battery life.",
+    description: "Noise-cancelling headphones with 40h battery life.",
     price: 89.99,
     category: "Electronics",
     brand: "SoundCore",
     rating: 4.5,
     stock: 35,
-    images: ["https://i.imgur.com/XX1.jpg"]
+    images: ["https://picsum.photos/400?random=1"]
   },
   {
     title: "Smart Fitness Watch",
-    description: "Tracks heart rate, sleep, calories, and supports notifications.",
+    description: "Tracks heart rate, sleep, and steps. Waterproof.",
     price: 129.00,
     category: "Electronics",
-    brand: "FitMax",
-    rating: 4.2,
+    brand: "FitPulse",
+    rating: 4.3,
     stock: 50,
-    images: ["https://i.imgur.com/XX2.jpg"]
+    images: ["https://picsum.photos/400?random=2"]
   },
   {
-    title: "4K Ultra HD Smart TV (55-inch)",
-    description: "Crystal clear 4K resolution with built-in streaming apps.",
+    title: "4K Smart TV (55-inch)",
+    description: "Ultra HD display with built-in streaming apps.",
     price: 499.00,
     category: "Electronics",
-    brand: "VisionX",
+    brand: "VisionMax",
     rating: 4.7,
     stock: 20,
-    images: ["https://i.imgur.com/XX3.jpg"]
+    images: ["https://picsum.photos/400?random=3"]
   },
   {
     title: "Portable Bluetooth Speaker",
-    description: "Deep bass, waterproof, 18h playtime.",
+    description: "Waterproof speaker with deep bass.",
     price: 39.99,
     category: "Electronics",
-    brand: "BoomBox",
+    brand: "BoomFlex",
     rating: 4.4,
     stock: 60,
-    images: ["https://i.imgur.com/XX4.jpg"]
+    images: ["https://picsum.photos/400?random=4"]
   },
   {
     title: "Noise Cancelling Earbuds",
-    description: "Lightweight earbuds with touch control and charging case.",
+    description: "True wireless earbuds with touch control.",
     price: 59.99,
     category: "Electronics",
     brand: "AirTune",
     rating: 4.6,
     stock: 44,
-    images: ["https://i.imgur.com/XX5.jpg"]
-  },
-  {
-    title: "Gaming Mechanical Keyboard",
-    description: "RGB lighting, fast switches, and aluminum frame.",
-    price: 75.00,
-    category: "Electronics",
-    brand: "RedLine",
-    rating: 4.8,
-    stock: 32,
-    images: ["https://i.imgur.com/XX6.jpg"]
-  },
-  {
-    title: "1080p HD Webcam",
-    description: "Perfect for Zoom meetings and streaming.",
-    price: 24.99,
-    category: "Electronics",
-    brand: "StreamPro",
-    rating: 4.1,
-    stock: 80,
-    images: ["https://i.imgur.com/XX7.jpg"]
-  },
-  {
-    title: "Wireless Phone Charger",
-    description: "Fast charging pad compatible with all Qi devices.",
-    price: 19.99,
-    category: "Electronics",
-    brand: "ChargeNow",
-    rating: 4.3,
-    stock: 75,
-    images: ["https://i.imgur.com/XX8.jpg"]
+    images: ["https://picsum.photos/400?random=5"]
   },
 
-  // ----------------------- FASHION -----------------------
+  // FASHION
   {
-    title: "Men's Classic Leather Sneakers",
-    description: "Comfortable and stylish sneakers for daily wear.",
+    title: "Men's Leather Sneakers",
+    description: "Comfortable everyday sneakers.",
     price: 59.99,
     category: "Fashion",
     brand: "UrbanWalk",
     rating: 4.4,
     stock: 40,
-    images: ["https://i.imgur.com/F1.jpg"]
+    images: ["https://picsum.photos/400?random=6"]
   },
   {
     title: "Women's Denim Jacket",
-    description: "Trendy lightweight denim jacket.",
+    description: "Lightweight stylish denim jacket.",
     price: 45.00,
     category: "Fashion",
     brand: "BlueFit",
     rating: 4.6,
     stock: 28,
-    images: ["https://i.imgur.com/F2.jpg"]
-  },
-  {
-    title: "Men's Cotton Hoodie",
-    description: "Soft, warm, and perfect for cold weather.",
-    price: 35.00,
-    category: "Fashion",
-    brand: "CozyWear",
-    rating: 4.2,
-    stock: 55,
-    images: ["https://i.imgur.com/F3.jpg"]
-  },
-  {
-    title: "Women's Handbag",
-    description: "Premium PU leather handbag with compartments.",
-    price: 42.00,
-    category: "Fashion",
-    brand: "StylePro",
-    rating: 4.5,
-    stock: 31,
-    images: ["https://i.imgur.com/F4.jpg"]
+    images: ["https://picsum.photos/400?random=7"]
   },
   {
     title: "Men's Wristwatch",
-    description: "Water-resistant analog watch with steel strap.",
+    description: "Water-resistant analog watch.",
     price: 79.99,
     category: "Fashion",
-    brand: "TimeMax",
+    brand: "TimePro",
     rating: 4.7,
     stock: 22,
-    images: ["https://i.imgur.com/F5.jpg"]
+    images: ["https://picsum.photos/400?random=8"]
   },
   {
-    title: "Women's Sneakers",
-    description: "Lightweight sports sneakers for running.",
+    title: "Women's Running Shoes",
+    description: "Breathable shoes for gym and running.",
     price: 52.00,
     category: "Fashion",
     brand: "RunFit",
     rating: 4.3,
     stock: 37,
-    images: ["https://i.imgur.com/F6.jpg"]
+    images: ["https://picsum.photos/400?random=9"]
   },
   {
     title: "Men's Slim Fit Jeans",
-    description: "Stretchable and comfortable denim.",
+    description: "Stretchable all-day comfort denim.",
     price: 29.99,
     category: "Fashion",
-    brand: "DenimLab",
+    brand: "DenimWorks",
     rating: 4.1,
     stock: 49,
-    images: ["https://i.imgur.com/F7.jpg"]
+    images: ["https://picsum.photos/400?random=10"]
   },
 
-  // ----------------------- HOME & KITCHEN -----------------------
+  // HOME
   {
     title: "Stainless Steel Water Bottle",
-    description: "Double-wall insulated, keeps temperature for 24h.",
+    description: "Double-wall insulated steel bottle.",
     price: 16.99,
     category: "Home",
     brand: "HydroMax",
     rating: 4.4,
     stock: 90,
-    images: ["https://i.imgur.com/H1.jpg"]
+    images: ["https://picsum.photos/400?random=11"]
   },
   {
     title: "Non-Stick Frying Pan",
-    description: "Durable non-stick coating with ergonomic handle.",
+    description: "Durable non-stick cooking pan.",
     price: 22.50,
     category: "Home",
-    brand: "CookPro",
+    brand: "CookMate",
     rating: 4.3,
     stock: 33,
-    images: ["https://i.imgur.com/H2.jpg"]
+    images: ["https://picsum.photos/400?random=12"]
   },
   {
     title: "Electric Kettle",
-    description: "Fast-boil electric kettle with auto shut-off.",
+    description: "Fast-boil kettle with auto shut-off.",
     price: 29.99,
     category: "Home",
     brand: "HeatWave",
     rating: 4.6,
     stock: 47,
-    images: ["https://i.imgur.com/H3.jpg"]
+    images: ["https://picsum.photos/400?random=13"]
   },
   {
     title: "Memory Foam Pillow",
-    description: "Comfortable orthopedic pillow for deep sleep.",
+    description: "Orthopedic memory foam pillow.",
     price: 34.99,
     category: "Home",
     brand: "SleepWell",
     rating: 4.2,
     stock: 60,
-    images: ["https://i.imgur.com/H4.jpg"]
+    images: ["https://picsum.photos/400?random=14"]
   },
   {
     title: "LED Desk Lamp",
-    description: "Adjustable brightness with USB charging port.",
+    description: "Adjustable lamp with USB charging.",
     price: 18.99,
     category: "Home",
     brand: "BrightLite",
     rating: 4.5,
     stock: 70,
-    images: ["https://i.imgur.com/H5.jpg"]
+    images: ["https://picsum.photos/400?random=15"]
   },
 
-  // ----------------------- BEAUTY -----------------------
+  // BEAUTY
   {
     title: "Vitamin C Serum",
-    description: "Brightens skin and reduces dark spots.",
+    description: "Brightening face serum.",
     price: 15.99,
     category: "Beauty",
     brand: "GlowSkin",
     rating: 4.6,
     stock: 85,
-    images: ["https://i.imgur.com/B1.jpg"]
+    images: ["https://picsum.photos/400?random=16"]
   },
   {
     title: "Hair Growth Oil",
-    description: "Strengthens weak hair and promotes growth.",
+    description: "Strengthens and thickens hair.",
     price: 12.99,
     category: "Beauty",
     brand: "HairBloom",
     rating: 4.3,
     stock: 64,
-    images: ["https://i.imgur.com/B2.jpg"]
+    images: ["https://picsum.photos/400?random=17"]
   },
   {
     title: "Face Moisturizer",
-    description: "Hydrating cream for daily use.",
+    description: "Daily hydrating face cream.",
     price: 9.99,
     category: "Beauty",
     brand: "HydraCare",
     rating: 4.2,
     stock: 72,
-    images: ["https://i.imgur.com/B3.jpg"]
+    images: ["https://picsum.photos/400?random=18"]
   },
   {
     title: "Beard Oil",
-    description: "Softens and nourishes beard hair.",
+    description: "Softens beard and adds shine.",
     price: 11.50,
     category: "Beauty",
     brand: "BeardPro",
     rating: 4.4,
     stock: 53,
-    images: ["https://i.imgur.com/B4.jpg"]
+    images: ["https://picsum.photos/400?random=19"]
   },
 
-  // ----------------------- SPORTS -----------------------
+  // SPORTS
   {
     title: "Yoga Mat",
-    description: "Non-slip mat with 10mm thickness for comfort.",
+    description: "Non-slip yoga mat (10mm thickness).",
     price: 21.99,
     category: "Sports",
     brand: "FlexFit",
     rating: 4.5,
     stock: 45,
-    images: ["https://i.imgur.com/S1.jpg"]
+    images: ["https://picsum.photos/400?random=20"]
   },
   {
-    title: "Adjustable Dumbbells (Pair)",
-    description: "Perfect for home gym workouts.",
+    title: "Adjustable Dumbbells",
+    description: "Adjustable weights for home gym.",
     price: 39.99,
     category: "Sports",
     brand: "PowerX",
     rating: 4.7,
     stock: 28,
-    images: ["https://i.imgur.com/S2.jpg"]
+    images: ["https://picsum.photos/400?random=21"]
   },
   {
     title: "Football",
-    description: "Durable PU football for training and play.",
+    description: "Durable PU training football.",
     price: 14.99,
     category: "Sports",
     brand: "KickPro",
     rating: 4.1,
     stock: 55,
-    images: ["https://i.imgur.com/S3.jpg"]
+    images: ["https://picsum.photos/400?random=22"]
   },
   {
     title: "Running Shoes",
-    description: "Breathable shoes with shock absorption.",
+    description: "Shock-absorbing lightweight shoes.",
     price: 49.99,
     category: "Sports",
     brand: "RunFlex",
     rating: 4.4,
     stock: 37,
-    images: ["https://i.imgur.com/S4.jpg"]
+    images: ["https://picsum.photos/400?random=23"]
   },
 
-  // ----------------------- GAMING -----------------------
+  // GAMING
   {
     title: "Gaming Mouse",
-    description: "RGB lighting, ergonomic, 6 programmable buttons.",
+    description: "RGB gaming mouse with 6 buttons.",
     price: 29.99,
     category: "Gaming",
     brand: "ProClick",
     rating: 4.6,
     stock: 50,
-    images: ["https://i.imgur.com/G1.jpg"]
+    images: ["https://picsum.photos/400?random=24"]
   },
   {
     title: "PlayStation Wireless Controller",
-    description: "DualShock controller with vibration feedback.",
+    description: "DualShock controller for gaming.",
     price: 59.99,
     category: "Gaming",
     brand: "Sony",
     rating: 4.8,
     stock: 29,
-    images: ["https://i.imgur.com/G2.jpg"]
-  },
-  {
-    title: "Gaming Chair",
-    description: "Ergonomic chair with lumbar support.",
-    price: 149.99,
-    category: "Gaming",
-    brand: "GameSeat",
-    rating: 4.5,
-    stock: 21,
-    images: ["https://i.imgur.com/G3.jpg"]
-  },
-  {
-    title: "VR Headset",
-    description: "Immersive virtual reality headset.",
-    price: 199.99,
-    category: "Gaming",
-    brand: "VRPro",
-    rating: 4.7,
-    stock: 18,
-    images: ["https://i.imgur.com/G4.jpg"]
+    images: ["https://picsum.photos/400?random=25"]
   },
 
-  // ----------------------- OFFICE -----------------------
+  // OFFICE
   {
     title: "Laptop Stand",
-    description: "Adjustable aluminum stand for laptops.",
+    description: "Adjustable aluminum laptop stand.",
     price: 25.00,
     category: "Office",
     brand: "WorkEase",
     rating: 4.5,
     stock: 60,
-    images: ["https://i.imgur.com/O1.jpg"]
+    images: ["https://picsum.photos/400?random=26"]
   },
   {
     title: "Office Desk Chair",
-    description: "Comfortable chair with breathable mesh.",
+    description: "Ergonomic mesh office chair.",
     price: 89.99,
     category: "Office",
     brand: "ProSit",
     rating: 4.3,
     stock: 25,
-    images: ["https://i.imgur.com/O2.jpg"]
+    images: ["https://picsum.photos/400?random=27"]
   },
   {
     title: "USB Desk Fan",
-    description: "Quiet small fan for desk use.",
+    description: "Compact quiet USB fan.",
     price: 11.99,
     category: "Office",
     brand: "CoolBreeze",
     rating: 4.2,
     stock: 75,
-    images: ["https://i.imgur.com/O3.jpg"]
+    images: ["https://picsum.photos/400?random=28"]
   },
 
-  // ----------------------- ACCESSORIES -----------------------
+  // ACCESSORIES
   {
-    title: "Wireless Earbuds Case",
-    description: "Protective silicone case for earbuds.",
-    price: 7.99,
-    category: "Accessories",
-    brand: "CaseCraft",
-    rating: 4.1,
-    stock: 70,
-    images: ["https://i.imgur.com/A1.jpg"]
-  },
-  {
-    title: "Portable Power Bank (10000mAh)",
-    description: "Fast charging power bank with dual USB ports.",
+    title: "Power Bank 10000mAh",
+    description: "Fast-charging portable power bank.",
     price: 24.99,
     category: "Accessories",
     brand: "ChargeGo",
     rating: 4.6,
     stock: 42,
-    images: ["https://i.imgur.com/A2.jpg"]
+    images: ["https://picsum.photos/400?random=29"]
   },
   {
     title: "Travel Backpack",
-    description: "Water-resistant bag with laptop compartment.",
+    description: "Water-resistant backpack with compartments.",
     price: 39.99,
     category: "Accessories",
     brand: "TravelPro",
     rating: 4.5,
     stock: 33,
-    images: ["https://i.imgur.com/A3.jpg"]
+    images: ["https://picsum.photos/400?random=30"]
   },
 
-  // FILLERS TO MAKE IT 50 ITEMS -----------------------------------
+  // MORE FILLERS
   {
-    title: "Scented Candles Set",
-    description: "Lavender & vanilla aromatherapy candles.",
+    title: "Scented Candle Set",
+    description: "Lavender and vanilla scented candles.",
     price: 19.99,
     category: "Home",
     brand: "Calmify",
     rating: 4.6,
     stock: 41,
-    images: ["https://i.imgur.com/H6.jpg"]
+    images: ["https://picsum.photos/400?random=31"]
   },
   {
-    title: "Laptop Backpack",
-    description: "Anti-theft design with multiple pockets.",
-    price: 34.99,
-    category: "Accessories",
-    brand: "SecurePack",
-    rating: 4.4,
-    stock: 29,
-    images: ["https://i.imgur.com/A4.jpg"]
-  },
-  {
-    title: "Stainless Steel Knife Set",
-    description: "Sharp, durable cooking knives.",
+    title: "Knife Set",
+    description: "6-piece stainless steel kitchen knives.",
     price: 27.99,
     category: "Home",
     brand: "ChefPro",
     rating: 4.3,
     stock: 39,
-    images: ["https://i.imgur.com/H7.jpg"]
+    images: ["https://picsum.photos/400?random=32"]
   },
   {
     title: "Bluetooth Car Adapter",
@@ -456,17 +366,77 @@ const products = [
     brand: "DriveSound",
     rating: 4.2,
     stock: 57,
-    images: ["https://i.imgur.com/XX9.jpg"]
+    images: ["https://picsum.photos/400?random=33"]
   },
   {
-    title: " men's Wallet",
-    description: "Leather slim wallet with card slots.",
+    title: "Leather Wallet",
+    description: "Minimalist men's leather wallet.",
     price: 22.00,
     category: "Fashion",
     brand: "PocketMan",
     rating: 4.5,
     stock: 32,
-    images: ["https://i.imgur.com/F8.jpg"]
+    images: ["https://picsum.photos/400?random=34"]
+  },
+  {
+    title: "Baby Feeding Bottle",
+    description: "Anti-colic BPA-free feeding bottle.",
+    price: 9.99,
+    category: "Baby",
+    brand: "BabyCare",
+    rating: 4.7,
+    stock: 58,
+    images: ["https://picsum.photos/400?random=35"]
+  },
+  {
+    title: "Wireless Keyboard",
+    description: "Silent keys, slim design.",
+    price: 32.99,
+    category: "Electronics",
+    brand: "KeyLite",
+    rating: 4.4,
+    stock: 48,
+    images: ["https://picsum.photos/400?random=36"]
+  },
+  {
+    title: "Air Purifier",
+    description: "Removes dust, pollen, and odors.",
+    price: 59.99,
+    category: "Home",
+    brand: "PureAir",
+    rating: 4.6,
+    stock: 22,
+    images: ["https://picsum.photos/400?random=37"]
+  },
+  {
+    title: "Smart Light Bulb",
+    description: "WiFi-enabled RGB LED bulb.",
+    price: 12.99,
+    category: "Home",
+    brand: "GlowSmart",
+    rating: 4.5,
+    stock: 63,
+    images: ["https://picsum.photos/400?random=38"]
+  },
+  {
+    title: "Car Phone Holder",
+    description: "Dashboard/windshield phone mount.",
+    price: 10.99,
+    category: "Accessories",
+    brand: "GripPro",
+    rating: 4.3,
+    stock: 72,
+    images: ["https://picsum.photos/400?random=39"]
+  },
+  {
+    title: "Wireless Earbud Case",
+    description: "Shockproof silicone case.",
+    price: 6.99,
+    category: "Accessories",
+    brand: "CaseCraft",
+    rating: 4.1,
+    stock: 55,
+    images: ["https://picsum.photos/400?random=40"]
   }
 ];
 
