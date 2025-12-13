@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const productRoutes = require('./routes/product-route');
 const authRoutes = require('./routes/auth-route');
+const cartRoutes = require('./routes/cart-route');
 const cors = require("cors");
 const { swaggerUi, swaggerSpec } = require("./swagger/swagger");
 
@@ -17,6 +18,7 @@ app.use(cors({
 app.use(express.json());
 app.use('/api/products', productRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/cart', cartRoutes);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 const dbConnect = async () => {

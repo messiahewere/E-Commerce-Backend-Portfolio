@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {registerUser, loginUser} = require('../contollers/auth-controllers');
+const {validator} = require('../middleware/auth-handler')
+const {registerUser, loginUser, validUser} = require('../controllers/auth-controllers');
 
 // register user
 // https://e-commerce-backend-portfolio.onrender.com
@@ -8,24 +9,10 @@ const {registerUser, loginUser} = require('../contollers/auth-controllers');
 router.post('/register', registerUser);
 
 // login user
+// https://e-commerce-backend-portfolio.onrender.com
 // POST /api/auth/login
 router.post('/login', loginUser);
 
-
-
-module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
-
-
+router.post('/check', validator, validUser);
 
 module.exports = router;

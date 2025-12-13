@@ -10,6 +10,7 @@ const getAllProducts = async (req, res) => {
     }
 };
 
+// Only the admin can create a product by using the admin Token Access and appropriate Role Access
 const createAProduct = async (req, res) => {
     try {
         const {title, description, price, category, brand, rating, stock, images} = req.body;
@@ -22,6 +23,7 @@ const createAProduct = async (req, res) => {
     }
 };
 
+// Only the admin can edit a product by using the admin Token Access and appropriate Role Access
 const editAProduct = async (req, res) => {
     try {
         const {id} = req.params;
@@ -39,6 +41,7 @@ const editAProduct = async (req, res) => {
     }
 };
 
+// Only the admin can delete a product by using the admin Token Access and appropriate Role Access
 const deleteAProduct = async (req, res) => {
     try {
         const {id} = req.params;
