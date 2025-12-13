@@ -1,5 +1,5 @@
-const Cart = require('../schema/cart.schema')
-const Auth = require('../schema/auth.schema')
+const Cart = require('../schema/cart-schema')
+const Auth = require('../schema/auth-schema')
 
 const createCart = async (req, res) => {
     try {
