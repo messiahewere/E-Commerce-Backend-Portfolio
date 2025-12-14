@@ -47,10 +47,5 @@ const loginUser = async (req, res) => {
     }
 }
 
-// for testing
-const validUser = async (req, res) => {
-    res.status(200).json({message: 'Valid user', user: req.user});
-}
-
 
 module.exports = { registerUser, loginUser, validUser }
