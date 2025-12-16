@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose
 
 const cartSchema = new Schema({
-    userId: {type: String, required: true},
+    userId: {type: String, required: false},
     total: {type: Number, required: true},
     orderDate: {type: Date, required: true},
-    status: {type: String, required: true},
+    status: {type: String, required: false},
     products: [
         {
             title: { type: String, required: true, unique: true },
