@@ -8,10 +8,12 @@ router.use(validator);
 
 // Create an order for posting to the Order page when you place an order after selection
 // POST /api/cart
+// https://e-commerce-backend-portfolio.onrender.com/api/cart
 router.route('/').post(createCart);
 
 // Read the individual orders on the order page based on how they were selected
 // GET /api/cart
+// https://e-commerce-backend-portfolio.onrender.com/api/cart
 router.route('/').get(getCart);
 
 

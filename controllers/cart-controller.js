@@ -7,7 +7,8 @@ const createCart = async (req, res) => {
         if (!validUser) {
             return res.status(401).json({ message: 'Unauthorized' })
         }
-        const cart = await Cart.create({...validUser, userId: validUser.user._id})
+        const {total, orderDate, status, products} = req.body;
+        const cart = await Cart.create({userId: validUser.user._id, total, orderDate, status, products})
         res.status(201).json(cart)
     } catch (error) {
         res.status(500).json({ message: error.message })
@@ -20,7 +21,7 @@ const getCart = async (req, res) => {
         if (!validUser) {
             return res.status(401).json({ message: 'Unauthorized' })
         }
-        const cart = await Cart.findOne({userId: validUser.user._id})
+        const cart = await Cart.find({userId: validUser.user._id})
         res.status(200).json(cart)
     } catch (error) {
         res.status(500).json({ message: error.message })
