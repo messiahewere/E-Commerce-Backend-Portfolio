@@ -3,12 +3,12 @@ const Auth = require('../schema/auth-schema')
 
 const createCart = async (req, res) => {
     try {
-        const validUser = await Auth.findById(req.user._id)
+        const validUser = await Auth.findById(req.userId)
         if (!validUser) {
             return res.status(401).json({ message: 'Unauthorized' })
         }
         const {total, orderDate, status, products} = req.body;
-        const cart = await Cart.create({userId: validUser.user._id, total, orderDate, status, products})
+        const cart = await Cart.create({userId: validUser.userId, total, orderDate, status, products})
         res.status(201).json(cart)
     } catch (error) {
         res.status(500).json({ message: error.message })
@@ -17,11 +17,11 @@ const createCart = async (req, res) => {
 
 const getCart = async (req, res) => {
     try {
-        const validUser = await Auth.findById(req.user._id)
+        const validUser = await Auth.findById(req.userId)
         if (!validUser) {
             return res.status(401).json({ message: 'Unauthorized' })
         }
-        const cart = await Cart.find({userId: validUser.user._id})
+        const cart = await Cart.find({userId: validUser.userId})
         res.status(200).json(cart)
     } catch (error) {
         res.status(500).json({ message: error.message })
