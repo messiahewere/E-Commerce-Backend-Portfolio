@@ -5,6 +5,7 @@ require('dotenv').config();
 const productRoutes = require('./routes/product-route');
 const authRoutes = require('./routes/auth-route');
 const cartRoutes = require('./routes/cart-route');
+const adminRoutes = require('./routes/admin-route');
 const cors = require("cors");
 const { swaggerUi, swaggerSpec } = require("./swagger/swagger");
 
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use('/api/products', productRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/cart', cartRoutes);
+app.use('/api/admin', adminRoutes);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 const dbConnect = async () => {
