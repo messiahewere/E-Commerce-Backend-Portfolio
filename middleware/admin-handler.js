@@ -4,11 +4,11 @@ const adminHandler = async (req, res, next) => {
             return res.status(403).json({message: 'Access denied. Admins only.'});
         }
         
-        // Fetch user with role from database
-        const Auth = require('../schema/auth-schema');
-        const user = await Auth.findById(req.user.userId);
+        // // Fetch user with role from database
+        // const Auth = require('../schema/auth-schema');
+        // const user = await Auth.findById(req.user.userId);
         
-        if (user && user.role === 'admin') {
+        if (req.user.role === 'admin') {
             next();
         } else {
             res.status(403).json({message: 'Access denied. Admins only.'});
