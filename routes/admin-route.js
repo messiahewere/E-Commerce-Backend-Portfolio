@@ -134,7 +134,7 @@ router.get('/orders', getAllOrders);
  *                   type: string
  *                   example: Server Error
  */
-router.put('/order/status/:id', updateOrderStatus);
+router.patch('/order/status/:id', updateOrderStatus);
 
 // delete order
 // https://e-commerce-backend-portfolio.onrender.com
