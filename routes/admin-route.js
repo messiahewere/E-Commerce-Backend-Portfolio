@@ -68,7 +68,7 @@ router.get('/orders', getAllOrders);
 /**
  * @openapi
  * /api/admin/order/status/{id}:
- *   put:
+ *   patch:
  *     summary: Update order status (Admin only)
  *     tags: [Admin]
  *     security:
