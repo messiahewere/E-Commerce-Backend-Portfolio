@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose
 
 const cartSchema = new Schema({
-    userId: {type: mongoose.Schema.Types.ObjectId, ref: 'Auth', required: true},
+    userId: {type: String, required: true},
     total: {type: Number, required: true},
     orderDate: {type: Date, required: true},
     status: {type: String, required: false},
