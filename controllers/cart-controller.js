@@ -8,7 +8,7 @@ const createCart = async (req, res) => {
             return res.status(401).json({ message: 'Unauthorized' })
         }
         const {total, orderDate, status, products} = req.body;
-        const cart = await Cart.create({userId: validUser.userId, total, orderDate, status, products})
+        const cart = await Cart.create({userId: req.user.userId, total, orderDate, status, products})
         res.status(201).json(cart)
     } catch (error) {
         res.status(500).json({ message: error.message })
