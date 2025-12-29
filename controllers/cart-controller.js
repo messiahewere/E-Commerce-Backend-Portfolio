@@ -21,7 +21,7 @@ const getCart = async (req, res) => {
         if (!validUser) {
             return res.status(401).json({ message: 'Unauthorized' })
         }
-        const cart = await Cart.find({userId: validUser.userId})
+        const cart = await Cart.find({userId: req.user.userId})
         res.status(200).json(cart)
     } catch (error) {
         res.status(500).json({ message: error.message })
