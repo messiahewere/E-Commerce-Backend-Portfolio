@@ -281,7 +281,17 @@ router.delete('/order/:id', deleteOrder);
  *       500:
  *         description: Server Error
  */
-router.post('/product', upload.array('images', 5), createProduct);
+// Wrap multer upload to catch and return multer-specific errors clearly
+router.post('/product', (req, res, next) => {
+  upload.array('images', 5)(req, res, (err) => {
+    if (err) {
+      console.error('Multer upload error:', err);
+      // Multer errors are typically client issues (file size, invalid field, etc.)
+      return res.status(400).json({ message: err.message || 'File upload error' });
+    }
+    next();
+  });
+}, createProduct);
 
 
 // delete a product

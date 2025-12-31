@@ -1,11 +1,18 @@
 const cartSchema = require('../schema/cart-schema');
 const productSchema = require('../schema/product-schema');
+const fs = require('fs');
 const multer = require('multer');
 const path = require('path');
 
+// Ensure uploads directory exists to avoid ENOENT errors from multer
+const UPLOAD_DIR = 'uploads';
+if (!fs.existsSync(UPLOAD_DIR)) {
+    fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+}
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'uploads/');
+        cb(null, UPLOAD_DIR + '/');
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + '-' + Math.round(Math.random() * 1E9) + path.extname(file.originalname));
@@ -59,8 +66,10 @@ const deleteOrder = async (req, res) => {
 const createProduct = async (req, res) => {
     try {
         const { title, description, price, category, brand, rating, stock } = req.body;
-        
-        const images = req.files ? req.files.map(file => `${req.protocol}://${req.get('host')}/uploads/${file.filename}`) : [];
+
+        const images = req.files && Array.isArray(req.files)
+            ? req.files.map(file => `${req.protocol}://${req.get('host')}/uploads/${file.filename}`)
+            : [];
         
         const newProduct = new productSchema({
             title,
