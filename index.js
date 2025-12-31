@@ -17,6 +17,7 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
+app.use('/uploads', express.static('uploads'));
 app.use('/api/products', productRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/cart', cartRoutes);
